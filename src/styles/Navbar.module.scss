@@ -2,7 +2,20 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  column-gap: 1rem;
+}
+
+.logo {
+  min-width: 20px !important;
+  min-height: 20px !important;
+  width: 80% !important;
+  height: auto !important;
+  border-radius: 10px !important;
+}
+
+.logoPadding {
+  line-height: 0.5rem;
+  display: none;
+  padding-left: 0.5rem;
 }
 
 $navbar-underline-width: 85%;
@@ -66,10 +79,14 @@ $navbar-underline-width: 85%;
 
   .navbar {
     margin: 1.5rem 1.5rem 0 0;
+
+    li a {
+      font-size: 1.2rem;
+    }
   }
 
-  .navbar li a {
-    font-size: 1.2rem;
+  .logoPadding {
+    display: inline-block;
   }
 }
 

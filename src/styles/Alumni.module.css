@@ -26,7 +26,7 @@
 }
 
 .alumni p {
-  margin: 0.2rem;
+  margin: 0.1rem;
 }
 
 .alumni:hover {
@@ -50,7 +50,7 @@
 }
 
 .name {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .role {
@@ -64,11 +64,6 @@
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 0.25rem;
-}
-
-.description {
-  margin-top: 0.25rem;
-  font-size: 1.25rem;
 }
 
 @media screen and (min-width: 600px) {

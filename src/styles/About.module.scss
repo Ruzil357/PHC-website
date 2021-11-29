@@ -1,12 +1,12 @@
 ﻿.container {
-  margin-top: 4rem;
+  margin-top: 3rem;
   height: max-content;
 }
 
 .logo {
   aspect-ratio: 1;
-  width: 50%;
-  min-width: 50%;
+  width: 40%;
+  min-width: 40%;
   display: block;
   border-radius: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 1.5rem;
@@ -24,6 +24,15 @@
   column-gap: 1.5rem;
 }
 
+.header {
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
 .icon {
   border: 2px #fff solid;
   border-radius: 10000rem; /* Irrationally high value to have it as a circle indefinitely */
@@ -38,23 +47,26 @@
 }
 
 @media (min-width: 768px) {
-  .container {
-    margin-top: 6rem;
-  }
-
   .logo {
     width: 30%;
     min-width: 30%;
     border-radius: 2.5rem;
   }
+
+  .content {
+    max-width: 600px;
+  }
 }
 
 @media (min-width: 992px) {
-  .container {
-    margin-top: 10rem;
+  .logo {
+    width: 25%;
+    min-width: 25%;
+    border-radius: 3rem;
   }
 
-  .logo {
-    border-radius: 3rem;
+
+  .content {
+    max-width: 700px;
   }
 }

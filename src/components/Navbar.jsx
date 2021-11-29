@@ -1,8 +1,11 @@
 import React from 'react'
-import styles from './Navbar.module.scss'
+import styles from '../styles/Navbar.module.scss'
 import {useRouter} from 'next/router';
 import Link from 'next/link';
 import { navbarRoutes } from '../data/Routes'
+import Image from "next/image";
+import {imageDir} from "../data/constants";
+import {ST} from "next/dist/shared/lib/utils";
 
 const Wrapper = (props) => {
   return <li>{props.children}</li>
@@ -14,7 +17,7 @@ function NavLink({to, exact, children, activeClassName, ...props}) {
 
 
   if (isActive) {
-    props.className += ` ${activeClassName}`;
+    props.className = activeClassName;
   }
 
   return (
@@ -37,6 +40,10 @@ function Navbar() {
 
   return (
     <div className={styles.container}>
+      <span className={styles.logoPadding}>
+        <br/>
+        <Image src={`${imageDir}/common/psn.jpg`} className={styles.logo} width={60} height={60}/>
+      </span>
       <ul className={styles.navbar}>
         <React.Fragment>{routes}</React.Fragment>
       </ul>

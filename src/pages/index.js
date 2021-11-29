@@ -17,7 +17,7 @@ function Home() {
 			/>
 
 			<h1 className={'header'}>PSN Hack Club</h1>
-			<h3 className={`subheader text-center`}>
+			<h3 className={`subheader text-center ${styles.subTitle}`}>
 				<Typist
 					avgTypingDelay={50}
 					stdTypingDelay={20}

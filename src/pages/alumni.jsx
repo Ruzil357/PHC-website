@@ -3,12 +3,13 @@ import Card from '../components/UI/Card'
 import styles from '../styles/Alumni.module.css'
 import MetaDecorator from '../components/MetaDecorator'
 import {alumni} from '../data/Alumni'
+import {imageDir} from "../data/constants";
 
-const AlumniCard = ({name, link, role}) => {
-  const [image, setImage] = useState(`/images/alumni/${name.toLowerCase().replace(/ /g, '_')}.jpg`);
+const AlumniCard = ({name, link, role, year}) => {
+  const [image, setImage] = useState(`${imageDir}/alumni/${year}/${name.toLowerCase().replace(/ /g, '_')}.jpg`);
 
   const onImageError = () => {
-    setImage('/images/common/unknown_person.jpg')
+    setImage(`${imageDir}/common/unknown_person.jpg`)
   }
 
   return (
@@ -39,7 +40,7 @@ const Alumni = () => (
     />
 
     <p className={'subheader'}>Alumni</p>
-    <p className={styles.description}>
+    <p className={`${styles.description} content`}>
       The PSN Hack Club has a growing list of experienced alumni that aim to
       grow the club and mentor new members
     </p>
@@ -48,7 +49,12 @@ const Alumni = () => (
       <React.Fragment key={year.year}>
         <p className={styles.yearHeader}>{year.year}</p>
         <div className={styles.alumniContainer}>
-          {year.members.map((member) => <AlumniCard {...member} key={member.name}/>)}
+          {year.members.map((member) => (
+            <AlumniCard {...member}
+                        year={year.year.toString().replace(/ /g, '')}
+                        key={member.name}
+            />
+          ))}
         </div>
       </React.Fragment>
     ))}

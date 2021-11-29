@@ -1,9 +1,30 @@
 import React from 'react'
 import styles from '../styles/About.module.scss'
-import Image from 'next/image'
 import SocialIconWrapper from '../components/SocialIcon'
-import { icons } from '../data/SocialData'
+import {icons} from '../data/SocialData'
 import MetaDecorator from '../components/MetaDecorator'
+import {sections} from "../data/About";
+
+const SocialIcons = () => (
+  <ul className={styles.iconList}>
+    {icons.map((icon) => (
+      <li className={styles.icon} key={icon.url}>
+        <SocialIconWrapper data={icon}/>
+      </li>
+    ))}
+  </ul>
+)
+
+const Section = ({header, content}) => (
+  <React.Fragment>
+    <p className={`subheader ${styles.header}`}>{header}</p>
+    {
+      content.map(x => (
+        <p className={`content ${styles.content}`} key={x}>{x}</p>
+      ))
+    }
+  </React.Fragment>
+)
 
 function About() {
   return (
@@ -15,23 +36,13 @@ function About() {
         }
       />
 
-      <img alt={'Logo'} src={'/images/common/psn.jpg'} className={styles.logo}/>
+      {
+        sections.map((section, index) => (
+          <Section {...section} key={index}/>
+        ))
+      }
 
-      <h1 className={'header text-center'}>About us</h1>
-      <p className={'text-heading'}>Who are we?</p>
-      <p className={'text-content'}>
-        PSN Hack Club is a club under the global Hack Club network at Pathways
-        School Noida. We&apos;re a welcoming community of over 50 programmers,
-        developers and tech enthusiasts supporting each other on our own
-        journeys deeper into our respective fields.
-      </p>
-      <ul className={styles.iconList}>
-        {icons.map((icon) => (
-          <li className={styles.icon} key={icon.url}>
-            <SocialIconWrapper data={icon} />
-          </li>
-        ))}
-      </ul>
+      <SocialIcons/>
     </div>
   )
 }
