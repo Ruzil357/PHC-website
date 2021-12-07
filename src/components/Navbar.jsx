@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { navbarRoutes } from '../data/Routes'
 import Image from "next/image";
 import {imageDir} from "../data/constants";
-import {ST} from "next/dist/shared/lib/utils";
 
 const Wrapper = (props) => {
   return <li>{props.children}</li>
@@ -42,7 +41,7 @@ function Navbar() {
     <div className={styles.container}>
       <span className={styles.logoPadding}>
         <br/>
-        <Image src={`${imageDir}/common/psn.jpg`} className={styles.logo} width={60} height={60}/>
+        <Image src={`${imageDir}/logo64.jpg`} className={styles.logo} width={60} height={60}/>
       </span>
       <ul className={styles.navbar}>
         <React.Fragment>{routes}</React.Fragment>

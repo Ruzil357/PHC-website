@@ -8,7 +8,7 @@ function Layout(props) {
       <div
         style={{
           display: 'flex',
-          flexGrow: 1
+          flexGrow: 1,
         }}
       >
         {props.children}

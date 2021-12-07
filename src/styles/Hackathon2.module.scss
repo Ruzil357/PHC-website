@@ -7,6 +7,16 @@
     padding: 0;
     margin: 0;
   }
+
+  hr {
+    margin: 3rem auto;
+    background-color: white;
+    border: none;
+    height: 1px;
+    max-width: 250px;
+  }
+
+  overflow: hidden;
 }
 
 .heroContainer {
@@ -24,7 +34,70 @@
 
 .countdown {
   text-align: center;
-  font-size: 2.75rem;
+  font-size: 3rem;
+
+  .seconds {
+    display: none;
+  }
+}
+
+.viewDetailsArrow {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2rem;
+  height: 2rem;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contentContainer {
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+}
+
+.info {
+  display: grid;
+  margin-right: auto;
+  margin-left: auto;
+  grid-template-columns: 1fr;
+  padding-top: 3rem;
+}
+
+.infoContainer {
+  display: block;
+  margin-bottom: 4.5rem;
+
+  p {
+    text-align: center;
+  }
+
+  .header {
+    font-size: 6rem;
+  }
+
+  .subHeader {
+    font-size: 2rem;
+    margin-top: -1rem;
+  }
+
+  .description {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 1.25rem;
+    margin: 0.25rem auto;
+    max-width: 250px;
+  }
+}
+
+.infoText {
+  font-size: 0.9rem !important;
+  text-align: center !important;
+  margin: 1rem auto !important;
 }
 
 @media (min-width: 576px) {
@@ -34,6 +107,10 @@
 
   .countdown {
     font-size: 3.5rem;
+
+    .seconds {
+      display: inline-block;
+    }
   }
 }
 
@@ -45,6 +122,20 @@
   .countdown {
     font-size: 5rem;
   }
+
+  .viewDetailsArrow {
+    bottom: 2.5rem;
+  }
+
+  .infoContainer {
+    .header {
+      font-size: 7rem;
+    }
+
+    .description {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -54,5 +145,17 @@
 
   .countdown {
     font-size: 6rem;
+  }
+
+
+  .info {
+    padding-top: 1rem;
+    hr {
+      display: none;
+    }
+
+    max-width: 1100px;
+
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
