@@ -10,7 +10,7 @@
 
   hr {
     width: 100%;
-    margin: 3rem auto;
+    margin: 4.5rem auto;
     background-color: white;
     border: none;
     height: 1px;
@@ -72,7 +72,6 @@
 
 .infoContainer {
   display: block;
-  margin-bottom: 4.5rem;
 
   p {
     text-align: center;
@@ -137,6 +136,10 @@
       font-size: 1.5rem;
     }
   }
+
+  .infoText {
+    font-size: 1rem !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -151,6 +154,7 @@
 
   .info {
     padding-top: 1rem;
+    margin-bottom: 4.5rem;
     hr {
       display: none;
     }
@@ -158,5 +162,10 @@
     max-width: 1100px;
 
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+
+  .infoText {
+    font-size: 1.1rem !important;
   }
 }
