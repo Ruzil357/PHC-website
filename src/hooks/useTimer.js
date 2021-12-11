@@ -1,9 +1,9 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react'
 
 const useTimer = (date) => {
-  const [fDate, setFDate] = useState(date);
+  const [fDate, setFDate] = useState(date)
   const calculateTimeLeft = () => {
-    const difference = fDate - Math.floor(new Date().getTime())
+    const difference = fDate - new Date()
 
     const timeLeft = {
       days: 0,
@@ -22,7 +22,7 @@ const useTimer = (date) => {
     return timeLeft
   }
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
+  const [timeLeft, setTimeLeft] = useState({ days: '-', hours: '-', minutes: '-', seconds: '-' })
 
   const setDate = (date) => {
     setFDate(date)

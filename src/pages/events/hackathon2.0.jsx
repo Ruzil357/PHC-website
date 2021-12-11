@@ -7,11 +7,7 @@ import useTimer from '../../hooks/useTimer'
 import Fade from 'react-reveal/Fade'
 
 const Timer = ({ style }) => {
-  const [timeLeft, x] = useTimer(new Date(Date.UTC(2022, 1, 7, 11, 0, 0)))
-
-  const y = () => {
-    x(new Date(Date.UTC(2023, 1, 7, 11, 0, 0)))
-  }
+  const [timeLeft, _] = useTimer(Date.UTC(2022, 0, 7, 11, 0, 0))
 
   return (
     <animated.p style={style} className={styles.countdown}>
