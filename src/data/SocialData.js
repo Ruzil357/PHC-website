@@ -1,6 +1,6 @@
 export const icons = [
   {
-    url: 'https://github.com/TheVikJ/PHC-website',
+    url: 'https://github.com/DhrumanGupta/PHC-website/',
     colors: {
       fg: '#FFFFFF',
       hover: {
@@ -10,7 +10,7 @@ export const icons = [
     },
   },
   {
-    url: 'https://www.instagram.com/pathwayshackclub',
+    url: 'https://www.instagram.com/pathwayshackclub/',
     colors: {
       fg: '#ffffff',
       hover: {
