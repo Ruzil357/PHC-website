@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react'
 
 const useTimer = (date) => {
+  const getUtcTime = (date) => {
+    return (date.getTime() + date.getTimezoneOffset() * 60 * 1000)
+  }
+
   const [fDate, setFDate] = useState(date)
+
   const calculateTimeLeft = () => {
-    const difference = fDate - new Date()
+    const difference = getUtcTime(fDate) - getUtcTime(new Date())
 
     const timeLeft = {
       days: 0,
