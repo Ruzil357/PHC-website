@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "https://psnhackclub.netlify.app"
+  from = "https://psnhackclub.netlify.app/"
   to = "https://psn.hackclub.com/:splat"
   status = 301
 
