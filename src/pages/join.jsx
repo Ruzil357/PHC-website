@@ -47,7 +47,7 @@ function Join() {
       setStatus({
         error: true,
         success: false,
-        message: err.response.data.msg,
+        message: err.response.data.msg || "There was an error processing the request!",
         isUserError: true,
       })
     }
