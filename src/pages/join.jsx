@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import Card from '../components/UI/Card'
 import MetaDecorator from '../components/MetaDecorator'
-import { validPathwaysEmail } from '../utils/verifyEmail'
+import { validPathwaysEmail } from '../utils/emails'
 import axios from 'axios'
 
 function Join() {
@@ -43,11 +43,12 @@ function Join() {
         isUserError: false,
       })
     } catch (err) {
+      console.log()
       setStatus({
         error: true,
         success: false,
-        message: 'Something Went Wrong!',
-        isUserError: false,
+        message: err.response.data.msg,
+        isUserError: true,
       })
     }
     setInProgress(false)
@@ -93,7 +94,7 @@ function Join() {
             ref={emailRef}
             role="input"
             type="email"
-            className="bg-gray-200 border rounded focus:outline-none text-sm leading-none text-gray-800 py-3 w-full pl-3 mt-2 ring-offset-2 false"
+            className="bg-gray-200 border rounded focus:outline-none text-sm md:text-base leading-none text-gray-800 py-3 w-full pl-3 mt-2 ring-offset-2 false"
             defaultValue=""
           />
 

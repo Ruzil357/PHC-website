@@ -1,6 +1,6 @@
 export const alumni = [
   {
-    year: '2020 - 2021',
+    year: '2021',
     members: [
       {
         name: 'Vikramaditya Jaisingh',
@@ -15,7 +15,7 @@ export const alumni = [
     ],
   },
   {
-    year: '2019 - 2020',
+    year: '2020',
     members: [
       {
         name: 'Prithviraj Singh Shahani',

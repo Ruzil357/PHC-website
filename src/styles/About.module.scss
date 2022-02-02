@@ -33,6 +33,10 @@
   }
 }
 
+.content, .header {
+  margin: 0 auto;
+}
+
 .icon {
   border: 2px #fff solid;
   border-radius: 10000rem; /* Irrationally high value to have it as a circle indefinitely */
@@ -53,7 +57,7 @@
     border-radius: 2.5rem;
   }
 
-  .content {
+  .content, .header {
     max-width: 600px;
   }
 }
@@ -66,7 +70,7 @@
   }
 
 
-  .content {
+  .content, .header {
     max-width: 700px;
   }
 }
