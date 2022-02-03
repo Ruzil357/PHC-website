@@ -36,7 +36,7 @@ const handler = async (req, res) => {
       `https://discordapp.com/api/v6/channels/${channel}/invites`,
       {
         max_age: 172800, // 48 hours in seconds
-        max_uses: 1,
+        max_uses: 2,
         unique: true,
       },
       {
