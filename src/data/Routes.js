@@ -19,3 +19,11 @@ export const navbarRoutes = [
   },
 ]
 
+const baseRoute =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:1337'
+    : 'https://server.psn.hackclub.com'
+
+export const ApiRoutes = {
+  join: `${baseRoute}/join`,
+}

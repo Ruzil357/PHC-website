@@ -3,6 +3,7 @@ import Card from '../components/UI/Card'
 import MetaDecorator from '../components/MetaDecorator'
 import { validPathwaysEmail } from '../utils/emails'
 import axios from 'axios'
+import { ApiRoutes } from '../data/Routes'
 
 function Join() {
   const [status, setStatus] = useState({
@@ -35,7 +36,7 @@ function Join() {
 
     setInProgress(true)
     try {
-      const resp = await axios.post('/api/join', { email })
+      const resp = await axios.post(ApiRoutes.join, { email })
       setStatus({
         error: false,
         success: true,
