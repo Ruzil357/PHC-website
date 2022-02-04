@@ -74,7 +74,7 @@ a:any-link {
 }
 
 $start: 5;
-$steps: 100/$start;
+$steps: calc(100/$start);
 @for $i from $start through $steps {
   $step: $i * $start;
   @each $prop, $unit in (width: vw, height: vh) {

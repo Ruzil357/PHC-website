@@ -1,4 +1,4 @@
-﻿.container {
+.container {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -58,7 +58,7 @@ $navbar-underline-width: 85%;
         content: "";
         display: block;
         height: 2px;
-        left: (100% - $navbar-underline-width)/2;
+        left: calc((100% - $navbar-underline-width)/2);
         position: absolute;
         width: 0;
         transition: 0.3s ease;
