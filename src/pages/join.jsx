@@ -4,6 +4,8 @@ import MetaDecorator from '../components/MetaDecorator'
 import { validPathwaysEmail } from '../utils/emails'
 import axios from 'axios'
 import { ApiRoutes } from '../data/Routes'
+import { BsFillInfoCircleFill } from 'react-icons/bs'
+import Tooltip from '../components/UI/Tooltip'
 
 function Join() {
   const [status, setStatus] = useState({
@@ -36,7 +38,7 @@ function Join() {
 
     setInProgress(true)
     try {
-      const resp = await axios.post(ApiRoutes.join, { email })
+      await axios.post(ApiRoutes.join, { email })
       setStatus({
         error: false,
         success: true,
@@ -63,6 +65,14 @@ function Join() {
       <Card
         className={'!w-80 !h-auto md:!w-[32rem] block !mx-auto !my-auto !p-6'}
       >
+        <Tooltip tooltipText={'psnhackclub@gmail.com'} className={'-mb-6'}>
+          <BsFillInfoCircleFill
+            className={
+              'block w-6 h-6 ml-auto hover:cursor-grab hover:text-gray-800 text-gray-400 duration-200'
+            }
+          />
+        </Tooltip>
+
         <p
           className={
             'text-xl md:text-2xl font-extrabold leading-6 text-gray-800 !font-sans'
