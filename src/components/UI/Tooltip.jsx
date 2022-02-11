@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { BsFillTriangleFill } from 'react-icons/bs'
 
 function Tooltip({ children, tooltipText, className }) {
   const [visible, setVisible] = useState({ overlay: false, real: false })
