@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Card from '../components/UI/Card'
 import MetaDecorator from '../components/MetaDecorator'
 import { validPathwaysEmail } from '../utils/emails'
@@ -6,6 +6,14 @@ import axios from 'axios'
 import { ApiRoutes } from '../data/Routes'
 import { BsFillInfoCircleFill } from 'react-icons/bs'
 import Tooltip from '../components/UI/Tooltip'
+
+const onJoin = () => {
+  localStorage.setItem('emailSent', 'true')
+}
+
+const hasJoined = () => {
+  return Boolean(localStorage.getItem('emailSent'))
+}
 
 function Join() {
   const [status, setStatus] = useState({
@@ -19,9 +27,19 @@ function Join() {
 
   const emailRef = useRef(null)
 
+  useEffect(() => {
+    if (status.success) {
+      onJoin()
+    }
+  }, [status.success])
+
   const submit = async (event) => {
     // stop reload
     event.preventDefault()
+
+    if (hasJoined()) {
+      return
+    }
 
     const email = emailRef.current.value
     const isValid = validPathwaysEmail(email)
@@ -112,9 +130,9 @@ function Join() {
           />
 
           <button
-            disabled={inProgress || status.success}
+            disabled={inProgress || status.success || hasJoined()}
             className={`inline-flex items-center justify-center mt-2 block px-6 py-3 text-sm md:text-lg transition-colors duration-300 rounded-lg shadow-md text-white w-full ${
-              inProgress || status.success
+              inProgress || status.success || hasJoined()
                 ? 'bg-gray-400 shadow-gray-400/30 hover:cursor-not-allowed'
                 : 'bg-orange-500 hover:bg-red-500 shadow-red-400/30'
             }`}
