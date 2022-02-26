@@ -8,11 +8,15 @@ import { BsFillInfoCircleFill } from 'react-icons/bs'
 import Tooltip from '../components/UI/Tooltip'
 
 const onJoin = () => {
-  localStorage.setItem('emailSent', 'true')
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('emailSent', 'true')
+  }
 }
 
 const hasJoined = () => {
-  return Boolean(localStorage.getItem('emailSent'))
+  return Boolean(
+    typeof window !== 'undefined' && localStorage.getItem('emailSent')
+  )
 }
 
 function Join() {
