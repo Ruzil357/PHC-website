@@ -31,12 +31,6 @@ function Join() {
 
   const emailRef = useRef(null)
 
-  useEffect(() => {
-    if (status.success) {
-      onJoin()
-    }
-  }, [status.success])
-
   const submit = async (event) => {
     // stop reload
     event.preventDefault()
@@ -67,6 +61,7 @@ function Join() {
         message: 'Email sent!',
         isUserError: false,
       })
+      onJoin()
     } catch (err) {
       console.log()
       setStatus({
