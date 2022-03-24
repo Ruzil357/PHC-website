@@ -18,7 +18,7 @@ export const navbarRoutes = [
 const baseRoute =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:1337'
-    : 'http://20.198.76.108'
+    : 'https://investing-society.vondrr.live'
 
 export const ApiRoutes = {
   join: `${baseRoute}/join`,
