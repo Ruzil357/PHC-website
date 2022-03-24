@@ -78,11 +78,11 @@ function Join() {
 
   return (
     <>
-      <MetaDecorator description={'Join the PSN Hack Club!'} title={'Join'} />
+      <MetaDecorator description={'Join the Investing Society!'} title={'Join'} />
       <Card
         className={'!w-80 !h-auto md:!w-[32rem] block !mx-auto !my-auto !p-6'}
       >
-        <Tooltip tooltipText={'psnhackclub@gmail.com'} className={'-mb-6'}>
+        <Tooltip tooltipText={'psn.investing.society@gmail.com'} className={'-mb-6'}>
           <BsFillInfoCircleFill
             className={
               'block w-6 h-6 ml-auto hover:cursor-grab hover:text-gray-800 text-gray-400 duration-200'
@@ -133,7 +133,7 @@ function Join() {
             className={`inline-flex items-center justify-center mt-2 block px-6 py-3 text-sm md:text-lg transition-colors duration-300 rounded-lg shadow-md text-white w-full ${
               inProgress || status.success || hasJoined()
                 ? 'bg-gray-400 shadow-gray-400/30 hover:cursor-not-allowed'
-                : 'bg-orange-500 hover:bg-red-500 shadow-red-400/30'
+                : 'bg-blue-500 hover:bg-blue-600 shadow-blue-400/30'
             }`}
           >
             {inProgress && (
