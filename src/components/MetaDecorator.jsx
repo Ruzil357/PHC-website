@@ -4,7 +4,7 @@ import Head from "next/head";
 import {imageDir} from "../data/constants";
 
 const MetaDecorator = ({ title, description }) => {
-  const finalTitle = `${title} | PSN Hack Club`;
+  const finalTitle = `${title} | Investing Society`;
 
   return (
     <Head>
