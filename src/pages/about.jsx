@@ -23,6 +23,7 @@ const Section = ({header, content}) => (
         <p className={`content ${styles.content}`} key={x}>{x}</p>
       ))
     }
+    <br/>
   </React.Fragment>
 )
 
@@ -42,7 +43,7 @@ function About() {
         ))
       }
 
-      <SocialIcons/>
+      {/*<SocialIcons/>*/}
     </div>
   )
 }

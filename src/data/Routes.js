@@ -2,16 +2,12 @@ import React from 'react'
 
 export const navbarRoutes = [
   {
-    name: <b>PSN Hack Club</b>,
+    name: <b>Investing Society</b>,
     route: '/',
   },
   {
     name: 'About',
     route: '/about',
-  },
-  {
-    name: 'Alumni',
-    route: '/alumni',
   },
   {
     name: 'Join',
@@ -22,7 +18,7 @@ export const navbarRoutes = [
 const baseRoute =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:1337'
-    : 'https://server.psn.hackclub.com'
+    : 'http://20.198.76.108'
 
 export const ApiRoutes = {
   join: `${baseRoute}/join`,

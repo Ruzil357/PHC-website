@@ -12,11 +12,11 @@ function Home() {
 			<MetaDecorator
 				title={'Home'}
 				description={
-					'PSN Hack Club is a club under the global Hack Club network at Pathways School Noida. Open the website to learn more'
+					'Investing Society is a club at Pathways School Noida. Open the website to learn more'
 				}
 			/>
 
-			<h1 className={'header'}>PSN Hack Club</h1>
+			<h1 className={'header'}>Investing Society</h1>
 			<h3 className={`subheader text-center ${styles.subTitle}`}>
 				<Typist
 					avgTypingDelay={50}
