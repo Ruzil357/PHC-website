@@ -1,0 +1,104 @@
+.pageContainer {
+  margin-top: 5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.yearHolder {
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.alumniContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2rem;
+  justify-items: center;
+}
+
+.yearHeader {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+.alumni {
+  height: min(25rem, min-content);
+  display: flex;
+  flex-direction: column;
+  transition: transform 200ms;
+  width: 90%;
+  margin: 0;
+  padding: 0.75rem;
+}
+
+.alumni p {
+  margin: 0.1rem;
+}
+
+.alumni:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: .5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.name {
+  font-size: 1rem;
+}
+
+.role {
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 0.9rem;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+
+.pageHeader {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+@media screen and (min-width: 600px) {
+  .alumniContainer {
+    width: 70%;
+  }
+
+  .description {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .alumniContainer {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .alumniContainer {
+    width: 55%
+  }
+
+  .description {
+    max-width: 550px;
+  }
+}

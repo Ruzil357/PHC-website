@@ -6,12 +6,20 @@ export const navbarRoutes = [
     route: '/',
   },
   {
-    name: 'About',
-    route: '/about',
-  },
-  {
     name: 'Join',
     route: '/join',
+  },
+  {
+    name: 'Events',
+    route: '/events',
+  },
+  {
+    name: 'Alumni',
+    route: '/alumni',
+  },
+  {
+    name: 'About',
+    route: '/about',
   },
 ]
 
