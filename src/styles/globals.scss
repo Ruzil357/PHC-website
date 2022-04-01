@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  background: linear-gradient(140deg, rgb(56, 189, 229) 0%, rgb(46, 109, 224) 100%) fixed;
+  background: linear-gradient(140deg, rgb(64, 194, 234) 0%, rgb(42, 124, 212) 100%) fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -64,6 +64,12 @@ a:any-link {
   margin: 0;
 }
 
+.contentHeader {
+  margin-top: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .content {
   margin-top: 0.25rem;
   font-size: 1.25rem;
@@ -71,6 +77,11 @@ a:any-link {
 
 .text-center {
   text-align: center !important;
+}
+
+.items-center {
+  align-items: center;
+  justify-items: center;
 }
 
 $start: 5;
