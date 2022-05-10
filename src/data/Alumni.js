@@ -10,6 +10,10 @@ export const alumni = [
         name: 'Arjun Malhotra',
         role: 'Vice President',
       },
+      {
+        name: 'Ikshvaku Garg',
+        role: 'Secretary',
+      },
     ],
   },
 ]
