@@ -4,15 +4,15 @@ export const alumni = [
     members: [
       {
         name: 'Rushil Gupta',
-        role: 'President',
+        role: 'Founder | President',
       },
       {
-        name: 'Arjun Malhotra',
-        role: 'Vice President',
+        name: 'Shiv Wadhwa',
+        role: 'Co-Founder',
       },
       {
         name: 'Ikshvaku Garg',
-        role: 'Secretary',
+        role: 'Vice President',
       },
     ],
   },
