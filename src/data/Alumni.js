@@ -7,10 +7,6 @@ export const alumni = [
         role: 'Founder | President',
       },
       {
-        name: 'Shiv Wadhwa',
-        role: 'Co-Founder',
-      },
-      {
         name: 'Ikshvaku Garg',
         role: 'Vice President',
       },
