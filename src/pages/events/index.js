@@ -16,8 +16,7 @@ function Events() {
 			/>
       <p className={'subheader'}>Events</p>
       <p className={`${styles.description} content text-center`}>
-        The Investing Society hosts and has hosted many events in the past, make sure to checkout past events
-        and lookout for upcoming ones!
+        Checkout all the events hosted by the PSN Investing Society Here! (This page is currently Work In Progress)
       </p>
       <div className={styles.eventCardHolder}>
         {
